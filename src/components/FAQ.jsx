@@ -22,7 +22,7 @@ const FAQ = () => {
   return (
     <section className="faq-section">
       <div className="container">
-        <h3 className="text-center mb-4">Frequently Asked Questions</h3>
+        <h3 className="heading text-center mb-4">Frequently Asked Questions</h3>
         <div className="accordion accordion-flush" id="faqAccordion">
           {faqs.map((faq, index) => (
             <div className="accordion-item" key={index}>

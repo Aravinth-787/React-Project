@@ -42,26 +42,28 @@ const PopularCategories = () => {
 
       {/* Why Choose Platform Section */}
       <div className="choose-platform">
-        <h3 className="heading">Why Choose To Our Platform</h3>
-        <div className="accordion accordion-flush" id="whyChooseAccordion">
-          {whyChoose.map((item, index) => (
-            <div className="accordion-item" key={index}>
-              <h2 className="accordion-header">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target={`#whyCollapse${index}`}
-                  aria-expanded="false"
-                >
-                  {item.icon} {item.title}
-                </button>
-              </h2>
-              <div id={`whyCollapse${index}`} className="accordion-collapse collapse" data-bs-parent="#whyChooseAccordion">
-                <div className="accordion-body">{item.desc}</div>
+        <div className="container">
+          <h3 className="heading text-center mb-4">Why Choose To Our Platform</h3>
+          <div className="accordion accordion-flush" id="whyChooseAccordion">
+            {whyChoose.map((item, index) => (
+              <div className="accordion-item" key={index}>
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#whyCollapse${index}`}
+                    aria-expanded="false"
+                  >
+                    {item.icon} {item.title}
+                  </button>
+                </h2>
+                <div id={`whyCollapse${index}`} className="accordion-collapse collapse" data-bs-parent="#whyChooseAccordion">
+                  <div className="accordion-body">{item.desc}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 

@@ -2,7 +2,7 @@
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar fixed-top" style={{ backgroundColor: 'rgb(208, 208, 208)' }}>
+      <nav className="navbar fixed-top">
         <div className="container-fluid flex-wrap flex-md-nowrap">
 
           <a className="navbar-brand" href="/">
@@ -34,29 +34,29 @@ const Navbar = () => {
             aria-controls="offcanvasRight"
           ></i>
 
-          {/* Off Canvas Sidebar */}
-          <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div className="offcanvas-body">
-              <a href="#">Home</a>
-              <a href="#">About us</a>
-              <div className="dropdown">
-                <a className="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Register
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">User</a></li>
-                  <li><a className="dropdown-item" href="#">Worker</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div>
       </nav>
+
+      {/* Off Canvas Sidebar - Moved Outside Nav for Stability */}
+      <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div className="offcanvas-body">
+          <a href="#">Home</a>
+          <a href="#">About us</a>
+          <div className="dropdown">
+            <a className="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Register
+            </a>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="#">User</a></li>
+              <li><a className="dropdown-item" href="#">Worker</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
